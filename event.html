@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Eventet</title>
+    </head>
+    
+    <body>
+        <button onclick="document.getElementById('demo').innerHTML=Date()">The time is:</button>
+        <p id="demo"></p>
+
+        <form>
+            <select id="Selekt" onchange="shfaqvleren()">
+
+                <option value="Tirana">Tirana</option>
+                <option value="Durresi">Durresi</option>
+                <option value="Vlora">Vlora</option>
+            </select>
+
+            <p id="teksti"></p>
+
+            <script>
+
+                function shfaqvleren(){
+                    var vlera = document.getElementById('Selekt').value;
+
+                    document.getElementById('teksti').innerHTML = 'Qyteti qe keni zgjedhur eshte:' + vlera;
+                }
+            </script>
+        </form>
+    </body>
+</html>

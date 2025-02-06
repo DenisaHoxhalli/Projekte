@@ -1,0 +1,19 @@
+<html>
+   <head></head>
+   <body>
+    <h1>Reduce method</h1>
+    <p>Multiplication of all numbers in an array:</p>
+    <p id="demo"></p>
+    <script>
+        const numbers = [2, 4, 3, 10];
+        let multiplication = numbers.reduce(myFunction);
+
+        document.getElementById("demo").innerHTML = "Multiplication is:" + multiplication;
+
+        function myFunction(total, value, index, array) {
+            return total * value;
+        }
+
+    </script>
+   </body>
+</html>

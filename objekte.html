@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+const person = {
+  firstname: "Denisa",
+  lastname: "Hoxhalli",
+  age: 20,
+  eyecolor: "green",
+  fullName : function(){
+    return (this.firstname + " " + this.lastname ).toUpperCase();
+  }
+};
+document.write(person.fullName());
+
+const njeri = {
+  firstname: "Maria",
+  lastname: "Hoxha",
+  age: 30,
+  eyecolor: "green",
+};
+const individ = {
+  firstname: "Dori",
+  lastname: "Lica",
+  age: 43,
+  eyecolor: "green",
+};
+
+document.write(person.firstname + " is " + person.age + " years old." + "</br>");
+document.write(person.firstname + " " + person.lastname + "</br>");
+document.write(njeri.firstname + " is " + njeri.age + " years old." + "</br>");
+document.write(njeri.firstname + " " + njeri.lastname + "</br>");
+
+function mesatare(person,njeri,individ){
+    return (person.age + njeri.age + individ.age)/3
+}
+document.write(mesatare(person,njeri,individ))
+</script>
+
+</body>
+</html>

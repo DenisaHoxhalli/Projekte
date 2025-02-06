@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Pseudo klasat</title>
+        <style>
+            a:active{
+                color:red;
+            }
+            a:hover{
+                background-color: red;
+            }
+            a:visited{
+                background-color: green;
+            }
+            .checkbox:checked{
+                width: 20px;
+                height: 20px;
+            }
+            .radio:default{
+                color:red;
+            }
+            .div1 h2:first-of-type{
+                color: red;
+            }
+            input:focus{
+                border: 4px solid orange;
+            }
+            :indeterminate{
+                box-shadow: 0 0 2px 2px red;
+            }
+            .div1 :last-child{
+                color: red;
+            }
+            .div1 h1:last-of-type{
+                color: green;
+            }
+            li:nth-last-child(2){
+                color: orange;
+            }
+            .div h1 :nth-last-of-type(2){
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://google.com">Google</a>
+        <form>
+            <input type="text">
+            <input type="text">
+            <input class="checkbox" type="checkbox">
+            <input class="radio" type="radio">female
+            <input class="radio" type="radio">male
+        </form>
+        <ol>
+            <li>Html</li>
+            <li>Css</li>
+            <li>Bootstrap</li>
+            <li>Javascript</li>
+        </ol>
+        <div class="div1">
+            <p>Ky eshte nje paragraf</p>
+            <h1>Ky eshte nje heading h1</h1>
+            <h2>Ky eshte nje heading h2</h2>
+            <h1>Ky eshte nje heading h1</h1>
+            <h2>Ky eshte nje heading h2</h2>
+        </div>
+    </body>
+</html>

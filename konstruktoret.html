@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function Libri(titulli , autori , viti , shtepiabotuese,boolean) {
+            this.titulli = titulli;
+            this.autori = autori;
+            this.viti = viti;
+            this.shtepiabotuese = shtepiabotuese;
+            this.boolean = boolean;
+            }
+            function fullName(Libri){
+                return Libri.titulli + " " + Libri.autori + " " + Libri.viti + " " + Libri.shtepiabotuese + " " + Libri.boolean;
+            }
+
+            Libri1 = new Libri("Historia ime" , "Edward Snowden" , 2021 , "Botimet Pema" , false);
+            Libri2 = new Libri("Pallati i Endrrave" , "Ismail Kadare" , 1981, "sh.b Naim Frasheri" , true);
+        
+            document.write(fullName(Libri1));
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+p{
+  position: static;
+  display: inline;
+}
+h1{
+  position: relative;
+  display: none;
+}
+a{
+  position: absolute;
+  display: block;
+}
+img{
+  position: fixed;
+  display:inline-block;
+  padding-top: 100px;
+}
+ul{
+  position: sticky;
+  margin-top: 300px;
+}

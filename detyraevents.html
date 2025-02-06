@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Mouse Events Example</title>
+  <style>
+    #hoverBox {
+      width: 150px;
+      height: 100px;
+      background-color: lightpink;
+      text-align: center;
+      line-height: 100px;
+      border: 2px solid rgb(255, 0, 179);
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div id="hoverBox" 
+       onmouseover="this.style.backgroundColor='lightgreen'; this.innerHTML='Mouse Over!';" 
+       onmouseout="this.style.backgroundColor='lightpink'; this.innerHTML='Mouse Out!';">
+    Hover Me!
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The flatMap() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+const myArr = ["jony", "gert", "tom", "henry"];
+const newArr = myArr.flatMap(x => [x, x.toUpperCase()]);
+document.getElementById("demo").innerHTML = newArr;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+        <body>
+            <h1>The filter() Method</h1>
+            <p>The filter method krijon nje array te re nga te gjithe elementet e array te cilet kalojne nje test</p>
+            <p id="demo"></p>
+
+            <script>
+                const number = [12, 23, 4, 7, 38, 10, 57];
+                const over10 = number.filter(myFunction);
+
+                document.getElementById("demo").innerHTML = over10;
+
+                function myFunction(value, index, array) {
+                return value > 10;
+                }
+
+            </script>
+        </body>
+</html>

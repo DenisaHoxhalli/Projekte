@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Pseudo element</title>
+        <style>
+            p::after{
+                content: "Nje fjale";
+            }
+            p::before{
+                content: "Fjalia";
+            }
+            p::first-letter{
+                color:red;
+            }
+            p::first-line{
+                text-decoration: underline;
+            }
+            li::marker{
+                color:green;
+            }
+            p::selection{
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Ky eshte nje tekst i cfaredoshem ne leksionin e pseudo elementeve
+            Ky eshte nje tekst i cfaredoshem ne leksionin e pseudo</p>
+            <ol>
+                <li>Html</li>
+                <li>Css</li>
+            </ol>
+    </body>
+</html>

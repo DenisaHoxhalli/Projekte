@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <p>Detyre me perdorimin e For In Loop</p>
+        <p id="demo"></p>
+
+        <script>
+            const person ={emri:"Denisa", mbiemri:"Hoxhalli", mosha:"20", dega:"IE", viti:"3"}
+
+            let text = " ";
+            for(let x in person) {
+                text += person[x] + " ";
+            }
+
+            document.getElementById("demo").innerHTML = text;
+        </script>
+    </body>
+</html>

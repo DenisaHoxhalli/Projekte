@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+
+<p>Call a function once for each array element:</p>
+
+<p id="demo"></p>
+
+
+<script>
+const numbers = [45, 4, 9, 16, 25, 24, 13];
+const numrat = [20, 23, 45, 35, 21, 10, 67];
+const number = [1, 2, 12, 34, 41, 30];
+
+let text = "";
+
+const both = numbers.concat(numrat,number)
+
+both.forEach(myFunction);
+document.getElementById("demo").innerHTML = text;
+
+function myFunction(value, index, array) {
+text += value + "<br>"; 
+}
+</script>
+
+</body>
+</html>

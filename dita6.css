@@ -1,0 +1,40 @@
+#static{
+    border: 5px;
+    border-color: red;
+    border-style: solid;
+    position: static;
+}
+
+#relative{
+    border: 5px;
+    border-color: blue;
+    border-style: solid;
+    position: relative;
+}
+
+#absolute{
+    border: 5px;
+    border-color:yellow;
+    border-style: solid;
+    position: absolute;
+    width: 98%;
+}
+
+#fixed{
+    border: 5px;
+    border-color: green;
+    border-style: solid;
+    position: fixed;
+    margin-top: 60px;
+    width: 98%;
+}
+
+
+#sticky{
+    border: 5px;
+    border-color: orange;
+    border-style: solid;
+    position: sticky;
+    margin-top: 120px;
+
+}

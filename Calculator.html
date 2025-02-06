@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: rgb(195, 230, 195);
+        }
+
+        h1 {
+            color:rgb(38, 36, 36);
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #0a844b;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: 1px solid green;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Calculator</h1>
+
+    <label for="firstNumber">Enter First Number:</label><br>
+    <input type="text" id="firstNumber" placeholder="First number"><br><br>
+
+    <label for="secondNumber">Enter Second Number:</label><br>
+    <input type="text" id="secondNumber" placeholder="Second number"><br><br>
+
+    <label for="operator">Choose any Operator:</label><br>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+    <button onclick="clearFields()">Clear</button>
+
+    <div id="result">The Answer is:</div>
+
+    <script>
+        function calculate() {
+            const firstNumber = parseFloat(document.getElementById("firstNumber").value);
+            const secondNumber = parseFloat(document.getElementById("secondNumber").value);
+            const operator = document.getElementById("operator").value;
+
+            let result;
+            switch (operator) {
+                case "+":
+                    result = firstNumber + secondNumber;
+                    break;
+                case "-":
+                    result = firstNumber - secondNumber;
+                    break;
+                case "*":
+                    result = firstNumber * secondNumber;
+                    break;
+                case "/":
+                    if (secondNumber == 0) {
+                        result = "Error: Division by zero";
+                    } else {
+                        result = firstNumber / secondNumber;
+                    }
+                    break;
+                default:
+                    result = "Invalid operator";
+            }
+
+            document.getElementById("result").innerHTML = "The Answer is: " + result;
+        }
+
+        function clearFields() {
+            document.getElementById("firstNumber").value = "";
+            document.getElementById("secondNumber").value = "";
+            document.getElementById("operator").value = "+";
+            document.getElementById("result").innerHTML = "The Answer is:";
+        }
+    </script>
+
+</body>
+</html>

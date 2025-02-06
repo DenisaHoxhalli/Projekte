@@ -1,0 +1,78 @@
+body, h1, ul, li, a {
+    margin: 0;
+    padding: 4;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.koka {
+    display: flex;
+    background-color: #009688;
+    padding: 10px 20px;
+}
+
+.koka ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.koka a {
+    color: white;
+    font-weight: bold;
+}
+.koka .active{
+    background-color: red;
+}
+.koka a:hover {
+    background-color:rgb(9, 101, 70);
+}
+.koka a:active {
+    background-color: red;
+}
+
+.faqja {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.faqja img {
+    width: 100%;
+    height: auto;
+    filter: brightness(80%);
+}
+
+.faqja h1 {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: red;
+}
+
+.social-icons {
+    position: absolute;
+    left: 10px;
+    top: 20%;
+    transform: translateY(-70%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: gray;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.social-icons a:hover {
+    width: 60px;
+  
+}

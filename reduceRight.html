@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <h1>The reduceRight Method</h1>
+        <p></p>
+        <p id="demo"></p>
+        <script>
+            const numbers = [2, 3, 1, 6, 30];
+            let zbritja = numbers.reduceRight(myFunction);
+
+            document.getElementById("demo").innerHTML = "Zbritja:" + zbritja;
+
+            function myFunction(total, value, index, array) {
+               return total - value;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function Student(emri , mbiemri , mosha , klasa){
+            this.emri = emri;
+            this.mbiemri = mbiemri;
+            this.mosha = mosha;
+            this.klasa = klasa;
+            }
+            function fullName(Student){
+                return Student.emri + Student.mbiemri;
+            }
+
+            Studenti1 = new Student("Denisa" , "Hoxhalli" , 20, "Bussines Informatics");
+            Studenti2 = new Student("Jon" , "Doe" , 30 , "Graphic design");
+
+            document.write(fullName(Studenti1));
+
+        </script>
+    </body>
+</html>

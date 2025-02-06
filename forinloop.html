@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For In Loop</h2>
+<p>The for in statement loops through the properties of an object:</p>
+
+<p id="demo"></p>
+
+<script>
+const objekt = {firstname:"John", lastname:"Doe", age:25};    //veti firstname,lastname(forin per cdo veti brenda objektit )
+
+let txt = "";
+for (let veti in objekt) {
+  txt += objekt[veti] + " ";
+}
+
+document.getElementById("demo").innerHTML = txt;
+document.write(objekt.lastname);
+</script>
+
+</body>
+</html>
