@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-bottom: 1px solid lightblue;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <input type="text" id="taskInput" placeholder="Shkruaj një detyrë">
+    <button id="addTaskBtn">Add task</button>
+    <select id="filter">
+        <option value="all">Të gjitha</option>
+        <option value="completed">E përfunduara</option>
+        <option value="uncompleted">E paplotësuar</option>
+    </select>
+    <ul id="taskList"></ul>
+    
+    <script>
+        document.getElementById("addTaskBtn").addEventListener("click", function() {
+            let taskInput = document.getElementById("taskInput");
+            let taskText = taskInput.value.trim();
+            if (!taskText) return;
+
+            let li = document.createElement("li");
+            li.innerHTML = `<input type="checkbox" class="taskCheckbox"> 
+                            <span>${taskText}</span> 
+                            <button class="deleteTask">Hiq</button>`;
+            document.getElementById("taskList").appendChild(li);
+            taskInput.value = "";
+        });
+
+        document.getElementById("taskList").addEventListener("click", function(event) {
+            if (event.target.classList.contains("deleteTask")) {
+                event.target.parentElement.remove();
+            } else if (event.target.classList.contains("taskCheckbox")) {
+                event.target.nextElementSibling.classList.toggle("completed", event.target.checked);
+            }
+        });
+
+        document.getElementById("filter").addEventListener("change", function() {
+            let filterValue = this.value;
+            let tasks = document.querySelectorAll("#taskList li");
+            tasks.forEach(task => {
+                let isCompleted = task.querySelector(".taskCheckbox").checked;
+                task.style.display = (filterValue === "all" ||
+                    (filterValue === "completed" && isCompleted) ||
+                    (filterValue === "uncompleted" && !isCompleted)) ? "flex" : "none";
+            });
+        });
+    </script>
+</body>
+</html>
